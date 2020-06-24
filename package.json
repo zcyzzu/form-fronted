@@ -1,0 +1,23 @@
+{
+  "name": "form-fronted",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "export": "nuxt export",
+    "serve": "nuxt serve"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.11.0",
+    "eslint-loader": "^4.0.2",
+    "nuxt": "^2.13.0",
+    "vuetify": "^2.3.1",
+    "vuetify-loader": "^1.5.0",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.11.2"
+  }
+}
