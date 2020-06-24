@@ -8,7 +8,6 @@
   export default {
     name: 'Contact',
 
-
     extends: View,
 
     mixins: [

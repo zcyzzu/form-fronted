@@ -6,13 +6,15 @@
     :color="color || 'white'"
     :height="$vuetify.breakpoint.mdAndUp ? '100px' : '60px'"
   >
+  <div class="pa-6">
     <v-img
       class="hidden-sm-and-down "
-      width="350"
-      max-width="350"
-      height="80"
+      min-width="250"
+      max-width="250"
+      max-height="80"
       :src="require('~/assets/form/logo.jpeg')"
     />
+  </div>
     <!-- <v-toolbar-title class="headline">
       <router-link
         :to="{ name: 'index' }"

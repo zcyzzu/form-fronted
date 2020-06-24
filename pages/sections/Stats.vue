@@ -2,6 +2,7 @@
   <base-section
     id="stats"
     class="primary"
+    space="0"
   >
     <v-row
       justify="center"

@@ -1,6 +1,6 @@
 <template>
   <base-section id="story-alt" class="grey lighten-4" space="96" bspace="96">
-    <v-row align="center" justify="center">
+    <v-row align="center" >
       <v-col cols="12" md="6">
         <v-img
           :min-height="$vuetify.breakpoint.mdAndUp ? '500px' : '200px'"
@@ -9,7 +9,7 @@
           :src="require('@/assets/about/clay-banks-LjqARJaJotc-unsplash.jpg')"
         />
       </v-col>
-      <v-col cols="12" md="4" class="px-10">
+      <v-col cols="12" md="6" class="px-10">
         <base-heading
           class="font-weight-bold py-3"
           title="关 于 我 们"
