@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'cidfont';
+    /* 重命名字体名 */
+    src: url('./source-han-sans-master//Normal/cidfont.ps.CN');
+    font-weight: normal;
+    font-style: normal;
+}

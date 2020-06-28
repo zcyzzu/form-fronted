@@ -15,13 +15,6 @@
       :src="require('~/assets/form/logo.jpeg')"
     />
   </div>
-    <!-- <v-toolbar-title class="headline">
-      <router-link
-        :to="{ name: 'index' }"
-        tag="h4"
-        style="cursor: pointer"
-      >云 导 师</router-link>
-    </v-toolbar-title> -->
     <v-spacer />
     <div v-if="$vuetify.breakpoint.mdAndUp">
       <v-tabs
@@ -41,8 +34,6 @@
           min-width="60px"
           text
         >
-          <!-- <span v-if="item.name === 'index'">Home</span>
-          <span v-else v-text="item.name" /> -->
           <span>{{item.default}}</span>
           <v-icon
             v-if="item.icon && $vuetify.breakpoint.mdAndUp"

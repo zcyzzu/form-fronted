@@ -22,7 +22,7 @@
           :ripple="false"
         >
           <v-list-item-icon><v-icon v-text="item.icon" /></v-list-item-icon>
-          <v-list-item-title v-text="item.name" />
+          <v-list-item-title v-text="item.default" />
         </v-list-item>
       </v-list-item-group>
     </v-list>
