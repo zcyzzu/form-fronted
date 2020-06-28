@@ -1,32 +1,32 @@
 <script>
-  // Extensions
-  import View from '~/pages/view'
+// Extensions
+import View from "~/pages/view";
 
-  // Mixins
-  import LoadSections from '@/mixins/load-sections'
+// Mixins
+import LoadSections from "@/mixins/load-sections";
 
-  export default {
-    name: 'Home',
+export default {
+  name: "Home",
 
+  extends: View,
 
-    extends: View,
+  mixins: [
+    LoadSections([
+      "hero",
+      "welcome-features",
+      "our-team",
+      "welcome-featuresBottom",
+      "why-choose-us",
+      "info"
+    ])
+  ],
 
-    mixins: [
-      LoadSections([
-        'hero',
-        'welcome-features',
-        'our-team',
-        'welcome-featuresBottom',
-        'why-choose-us',
-        'info',
-      ]),
-    ],
-
-    props: {
-      id: {
-        type: String,
-        default: 'home',
-      },
-    },
-  }
+  props: {
+    id: {
+      type: String,
+      default: "home"
+    }
+  },
+  
+};
 </script>

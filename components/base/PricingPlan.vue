@@ -21,7 +21,7 @@
         align="center"
       />
       <base-body
-        :text="`/${frequency}`"
+        :text="`(${frequency})`"
         class="font-weight-medium"
         align="center"
         space="0"
@@ -35,7 +35,7 @@
       no-gutters
     >
       <base-body
-        class="mx-auto pa-5"
+        class="mx-auto pa-3"
         space="0"
         :text="feature"
       />
@@ -74,7 +74,3 @@
     },
   }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

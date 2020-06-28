@@ -6,7 +6,7 @@
       search
     />
     <base-view />
-    <settings />
+    <!-- <settings /> -->
   </v-app>
 </template>
 

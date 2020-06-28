@@ -14,12 +14,13 @@
       <base-divider
         color="primary"
       />
-      <base-body
+      {{text}}
+      <!-- <base-body
         class="text-uppercase headline"
         align="center"
         space="2"
         v-text="text"
-      />
+      /> -->
     </div>
   </v-avatar>
 </template>
@@ -51,7 +52,7 @@
         const namedColor = this.$vuetify.theme.themes[isDark ? 'dark' : 'light'][this.color]
         const mobile = this.$vuetify.breakpoint.mobile
         return {
-          border: this.outlined && !mobile ? `2px ${namedColor ?? this.color} solid !important` : 'unset',
+          border: this.outlined ? `2px ${namedColor ?? this.color} solid !important` : "unset",
         }
       },
     },

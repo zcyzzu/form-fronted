@@ -6,13 +6,13 @@
   >
     <v-row
       no-gutters
-      class="px-12"
+      class="px-md-12 px-0"
       align="start"
       justify="center"
     >
       <v-col
         cols="12"
-        md="6"
+        md="12"
         class="px-3 pb-3"
       >
         <base-subheading
@@ -39,37 +39,14 @@
           </v-expansion-panel>
         </v-expansion-panels>
       </v-col>
-      <v-col
-        cols="12"
-        md="6"
-        class="px-3 py-1"
-      >
-        <base-subheading
-          title="其他什么东西或者删除"
-          class="primary--text"
-        />
-        <base-divider
-          color="white"
-          align="left"
-        />
-        <template v-for="(post, i) in appData.blogPosts">
-          <blog-post
-            :key="i"
-            :post="post"
-          />
-        </template>
-      </v-col>
     </v-row>
   </base-section>
 </template>
 
 <script>
-  import BlogPost from '@/components/blog/Post'
-
   export default {
     name: 'SectionWhyChooseUs',
     components: {
-      BlogPost,
     },
     data () {
       return {

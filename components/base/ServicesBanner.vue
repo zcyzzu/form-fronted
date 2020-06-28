@@ -1,6 +1,7 @@
 <template>
   <base-section space="0">
-    <v-img :src="src" max-height="700"></v-img>
+    <v-img eager :src="src" min-height="600" max-height="710">
+    </v-img>
     <transition name="fade">
       <div
         class="bannerDown text-center white--text d-flex flex-column justify-space-around"

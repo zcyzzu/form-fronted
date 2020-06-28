@@ -53,12 +53,12 @@ export default {
          videos: [
           {
             src:
-              "https://vod.daoshi.cloud/766c81f2f1ac48b3bde0b34b453c92d1/d0d1559c2e9c4b2093001841502b2422-9ce74f7d127f4a81f2b11d200e7de0ab-ld.m3u8",
-           cover: require(`~/assets/projects/adrian-TvN54bnuQg8-unsplash.jpg`)
+              "https://vod.daoshi.cloud/a05489cd057f4955add0b1debbe305ab/9456a70e93664407af145c10a04c1e58-dcce5d715315ebe8eed8cb87021260fc-ld.m3u8",
+            cover: require(`~/assets/projects/adrian-TvN54bnuQg8-unsplash.jpg`)
           },
           {
             src:
-              "https://vod.daoshi.cloud/389affc4e0294a768c988ecd69491c37/1b3cc140acd64a228aa55c0b393984e8-43470e71d440b1d610f2906ac4c2160c-ld.m3u8",
+              "https://vod.daoshi.cloud/b6b820022f38487481751b96fcf828c6/641a3205252c4e9780e537471f19909b-b2ba34499fcca1714c4e11f4817fb8f2-ld.m3u8",
            cover: require(`~/assets/projects/adrian-TvN54bnuQg8-unsplash.jpg`)
           }
         ]

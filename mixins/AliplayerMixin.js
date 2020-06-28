@@ -38,7 +38,7 @@ export const AliplayerMixin = {
                     cover: `${this.contents.videos[i].cover}`,
                     rePlay: false,
                     playsinline: true,
-                    preload: true,
+                    preload: false,
                     language: "zh-cn",
                     controlBarVisibility: "hover",
                     useH5Prism: true,

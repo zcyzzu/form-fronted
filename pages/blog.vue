@@ -10,7 +10,7 @@ export default {
 
   extends: View,
 
-  mixins: [LoadSections(["BlogBanner", "teamOne", "teamOneAli", "info"])],
+  mixins: [LoadSections(["BlogBanner", "ourBlog","blogAli", "info"])],
 
   props: {
     id: {

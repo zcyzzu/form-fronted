@@ -27,7 +27,12 @@
               ></v-text-field>
             </v-row>
             <v-row>
-              <v-text-field label="微信号?" :rules="[rules.wechat]" :value="wechat" @input="setWechat"></v-text-field>
+              <v-text-field
+                label="微信号?"
+                :rules="[rules.wechat]"
+                :value="wechat"
+                @input="setWechat"
+              ></v-text-field>
             </v-row>
             <v-row>
               <v-select
@@ -43,7 +48,12 @@
               ></v-select>
             </v-row>
             <v-row>
-              <v-textarea label="咨询的问题" rows="3" :value="msg" @input="setMsg"></v-textarea>
+              <v-textarea
+                label="咨询的问题"
+                rows="3"
+                :value="msg"
+                @input="setMsg"
+              ></v-textarea>
             </v-row>
           </v-col>
         </v-form>
@@ -51,7 +61,7 @@
         <!-- 以上是form表单 -->
         <v-card-actions class="d-flex justify-center">
           <v-btn color="primary" @click="submit">确定</v-btn>
-          <v-btn color="primary" @click="dialog = false">取消</v-btn>
+          <v-btn color="primary" @click="writeCancel">取消</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -64,7 +74,8 @@
             <v-card-title
               class="headline"
               style="padding:8px 5px;text-align:center;display:block"
-            >警告</v-card-title>
+              >警告</v-card-title
+            >
             <v-card-text>信息保存失败，请重新填写!</v-card-text>
             <v-divider></v-divider>
 
@@ -72,27 +83,41 @@
 
             <v-card-actions style="padding:0">
               <v-spacer></v-spacer>
-              <v-btn color="green darken-1" text @click="tips = false">取 消</v-btn>
-              <v-btn color="green darken-1" text @click="tips = false">确 定</v-btn>
+              <v-btn color="green darken-1" text @click="tips = false"
+                >取 消</v-btn
+              >
+              <v-btn color="green darken-1" text @click="tips = false"
+                >确 定</v-btn
+              >
             </v-card-actions>
           </v-card>
         </v-dialog>
       </v-row>
     </v-container>
+    <v-snackbar v-model="snackbar" color="green" top>
+      {{ text }}
+      <template v-slot:action="{ attrs }">
+        <v-btn  icon v-bind="attrs" @click="snackbar = false">
+          <v-icon> mdi-close</v-icon>
+        </v-btn>
+      </template>
+    </v-snackbar>
   </div>
 </template>
 <script>
 import { mapState, mapMutations } from "vuex";
 export default {
-  props:{
-    dialog:{
-      type:Boolean,
-      default:false
+  props: {
+    dialog: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
     return {
       tips: false,
+      snackbar: false,
+      text: "提交成功！",
       majors: [
         { name: "企业管理", abbr: "MBA" },
         { name: "公共管理", abbr: "MPA" },
@@ -137,12 +162,15 @@ export default {
       wechat: "wechat",
       major: "major",
       msg: "msg"
-    }),
+    })
   },
   methods: {
+    writeCancel() {
+      this.$emit("writeCancel");
+    },
     submit() {
       if (this.$refs.form.validate()) {
-        this.dialog = false;
+        this.$emit("writeCancel");
         this.$axios
           .$post("/api/leavemessage", {
             nickname: this.$store.state.leaveMsg.nickname,
@@ -152,7 +180,7 @@ export default {
             message: this.$store.state.leaveMsg.msg
           })
           .then(success => {
-            console.log('ok')
+            this.snackbar = true;
           })
           .catch(error => {
             this.tips = true;

@@ -34,9 +34,9 @@
       return {
         stats: [
           { text: '正 式 营 业', number: '2015年', outlined: true, color: 'white' },
-          { text: '各 专 业 讲 师', number: '54+', color: 'white' },
+          { text: '各 专 业 讲 师', number: '54+', outlined:false,color: 'white' },
           { text: '辅 导 人 数', number: '5000+', outlined: true, color: 'white' },
-          { text: '定 制 辅 导', number: '40+', color: 'white' },
+          { text: '定 制 辅 导', number: '40+',outlined:false, color: 'white' },
         ],
       }
     },

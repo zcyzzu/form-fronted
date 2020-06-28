@@ -11,7 +11,7 @@
     mixins: [
       LoadSections([
         "servicesBanner",
-        "teamOne",
+        "our-services",
         "teamOneAli",
         'info',
       ]),
