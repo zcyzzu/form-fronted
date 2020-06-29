@@ -11,20 +11,6 @@
           text="我们的讲师具有丰富的学术研究和教育指导经验，让专业人士给您最专业的指导。我们的讲师具有丰富的学术研究和教育指导经验，让专业人士给您最专业的指导。我们的讲师具有丰富的学术研究和教育指导经验，让专业人士给您最专业的指导。我们的讲师具有丰富的学术研究和教育指导经验，让专业人士给您最专业的指导。我们的讲师具有丰富的学术研究和教育指导经验，让专业人士给您最专业的指导。我们的讲师具有丰富的学术研究和教育指导经验，让专业人士给您最专业的指导。我们的讲师具有丰富的学术研究和教育指导经验，让专业人士给您最专业的指导。我们的讲师具有丰富的学术研究和教育指导经验，让专业人士给您最专业的指导。我们的讲师具有丰富的学术研究和教育指导经验，让专业人士给您最专业的指导。我们的讲师具有丰富的学术研究和教育指导经验，让专业人士给您最专业的指导。我们的讲师具有丰富的学术研究和教育指导经验，让专业人士给您最专业的指导。"
           align="left"
         />
-        <!-- <base-btn
-          class="my-10 elevation-0 mx-1"
-          rounded
-          color="black"
-          dark
-          depressed
-          href="https://store.vuetifyjs.com/products/flairo-theme-pro"
-          target="_blank"
-        >
-          <span
-            class="font-weight-black text-none"
-            v-text="`Purchase ${appData.title}`"
-          />
-        </base-btn> -->
         <base-btn rounded class="my-10 elevation-0 mx-1" depressed>
           <span class="font-weight-black text-none" v-text="'Learn More'" />
         </base-btn>
@@ -37,7 +23,16 @@
           :src="
             require('@/assets/about/priscilla-du-preez-XkKCui44iM0-unsplash.jpg')
           "
-        />
+          class="grey lighten-2"
+        >
+          <template v-slot:placeholder>
+            <v-row class="fill-height ma-0" align="center" justify="center">
+              <v-progress-circular
+                indeterminate
+                color="green"
+              ></v-progress-circular>
+            </v-row> </template
+        ></v-img>
       </v-col>
     </v-row>
   </base-section>

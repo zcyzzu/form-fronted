@@ -17,6 +17,7 @@
           :height="$vuetify.breakpoint.mdAndUp ? '500px' : '200px'"
           :min-width="$vuetify.breakpoint.mdAndUp ? '600px' : '300px'"
           :src="require('@/assets/about/clay-banks-LjqARJaJotc-unsplash.jpg')"
+          class="grey lighten-2"
         />
       </v-col>
       <v-col

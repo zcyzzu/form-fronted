@@ -1,13 +1,22 @@
 <template>
   <base-section id="story-alt" class="grey lighten-4" space="96" bspace="96">
-    <v-row align="center" >
+    <v-row align="center">
       <v-col cols="12" md="6">
         <v-img
           :min-height="$vuetify.breakpoint.mdAndUp ? '500px' : '200px'"
           :height="$vuetify.breakpoint.mdAndUp ? '500px' : '200px'"
           :min-width="$vuetify.breakpoint.mdAndUp ? '600px' : '300px'"
           :src="require('@/assets/about/clay-banks-LjqARJaJotc-unsplash.jpg')"
-        />
+          class="grey lighten-2"
+        >
+          <template v-slot:placeholder>
+            <v-row class="fill-height ma-0" align="center" justify="center">
+              <v-progress-circular
+                indeterminate
+                color="green"
+              ></v-progress-circular>
+            </v-row> </template
+        ></v-img>
       </v-col>
       <v-col cols="12" md="6" class="px-10">
         <base-heading

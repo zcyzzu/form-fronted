@@ -22,20 +22,6 @@
           text="从选题、拟定研究框架、开题报告开始，一步一步教你撰写论文，详细分析导师意见，提前模拟毕业答辩，为你的毕业保驾护航。"
           align="left"
         />
-        <!-- <base-btn
-          class="my-10 elevation-0 mx-1"
-          rounded
-          color="black"
-          dark
-          depressed
-          href="https://store.vuetifyjs.com/products/flairo-theme-pro"
-          target="_blank"
-        >
-          <span
-            class="font-weight-black text-none"
-            v-text="`Purchase ${appData.title}`"
-          />
-        </base-btn> -->
         <base-btn
           rounded
           class="my-10 elevation-0 mx-1"
@@ -56,6 +42,7 @@
           :height="$vuetify.breakpoint.mdAndUp ? '500px' : '200px'"
           :min-width="$vuetify.breakpoint.mdAndUp ? '600px' : '300px'"
           :src="require('@/assets/about/priscilla-du-preez-XkKCui44iM0-unsplash.jpg')"
+          class="grey linght-5"
         />
       </v-col>
     </v-row>

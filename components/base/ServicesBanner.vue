@@ -1,6 +1,18 @@
 <template>
   <base-section space="0">
-    <v-img eager :src="src" min-height="600" max-height="710">
+    <v-img
+      :src="src"
+     :height="this.$vuetify.breakpoint.lg||this.$vuetify.breakpoint.md?710:500"
+      class="grey lighten-5"
+    >
+      <template v-slot:placeholder>
+        <v-row class="fill-height ma-0" align="center" justify="center">
+          <v-progress-circular
+            indeterminate
+            color="green"
+          ></v-progress-circular>
+        </v-row>
+      </template>
     </v-img>
     <transition name="fade">
       <div
@@ -31,7 +43,7 @@ export default {
       type: String,
       default: ""
     }
-  }
+  },
 };
 </script>
 <style scoped>
